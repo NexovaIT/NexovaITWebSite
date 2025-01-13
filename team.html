@@ -38,6 +38,10 @@
             transition: all 0.3s ease;
             padding: 20px;
             text-align: center;
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+            backdrop-filter: blur(10px); /* Apply blur effect to the background */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow to enhance the glassy effect */
+            color: #fff; /* Light text color to contrast with the dark background */
         }
 
         .team-item:hover {
@@ -52,12 +56,12 @@
         .team-title {
             font-size: 1.2rem;
             font-weight: 500;
-            color: #333;
+            color: #fff; /* Ensure title text is readable on the glassy background */
             margin-top: 10px;
         }
 
         .team-role {
-            color: #666;
+            color: #ddd; /* Slightly lighter text for role description */
             font-size: 1rem;
             margin-bottom: 20px;
         }
@@ -81,7 +85,7 @@
         .highlight-count {
             font-size: 1.4rem;
             font-weight: bold;
-              color: #ff5733;
+            color: #ff5733;
         }
 
         @media (max-width: 767px) {
