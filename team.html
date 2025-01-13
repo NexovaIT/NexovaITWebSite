@@ -24,10 +24,6 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        .team-item h5:hover {
-    color: #333 !important;  /* Maintain the same color on hover */
-    text-decoration: none;   /* Remove any underline or strikethrough (if any) */
-}
         .team-section {
             padding: 60px 0;
             background-color: #f7f8fa;
@@ -60,6 +56,12 @@
         .team-item p {
             font-size: 1rem;
             color: #777;
+        }
+
+        /* Prevent disappearing of text on hover */
+        .team-item h5:hover {
+            color: #333 !important;  /* Maintain the same color on hover */
+            text-decoration: none;   /* Remove any underline or strikethrough (if any) */
         }
 
         /* Styling for team member count */
@@ -129,7 +131,7 @@
                 </div>
 
                 <!-- Hierarchy Structure -->
-                <div class="team-item">
+                <div class="team-hierarchy">
                     <!-- Level 1: CEO -->
                     <div class="team-item">
                         <h5>Pega</h5>
