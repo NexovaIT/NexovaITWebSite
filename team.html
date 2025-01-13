@@ -34,23 +34,89 @@
     <!-- Custom Styles for Team Hierarchy -->
     <style>
         .team-item {
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
             margin-top: 20px;
+            text-align: center;
         }
 
-        .team-role-header {
-            font-size: 18px;
+        .team-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-item .team-role-header {
+            font-size: 20px;
             font-weight: bold;
-            color: #333;
+            color: #4a4a4a;
+            margin-bottom: 15px;
+            text-transform: uppercase;
         }
 
-        .team-members p {
-            font-size: 14px;
+        .team-item .team-members p {
+            font-size: 16px;
             margin: 5px 0;
-            color: #666;
+            color: #777;
+            transition: color 0.3s;
+        }
+
+        .team-item .team-members p:hover {
+            color: #0066cc;
+            cursor: pointer;
+        }
+
+        .team-item .team-icon {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 50px;
+            color: #0066cc;
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-item .team-icon i {
+            transition: all 0.3s ease;
+        }
+
+        .team-item:hover .team-icon i {
+            transform: rotate(360deg);
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            color: #333;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        .section-title h6 {
+            font-size: 20px;
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        .container-xxl {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 767px) {
+            .team-item {
+                padding: 20px;
+            }
+
+            .team-item .team-role-header {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
@@ -90,7 +156,7 @@
                 <div class="container my-5 py-5 px-lg-5">
                     <div class="row g-5 py-5">
                         <div class="col-12 text-center">
-                            <h1 class="text-white animated zoomIn">Team</h1>
+                            <h1 class="text-white animated zoomIn">Our Team</h1>
                             <hr class="bg-white mx-auto mt-0" style="width: 90px;">
                         </div>
                     </div>
@@ -106,21 +172,22 @@
                     <h6 class="position-relative d-inline text-primary ps-4">Our Team</h6>
                     <h2 class="mt-2">Our Team Structure</h2>
                 </div>
-                
+
                 <!-- Team Hierarchy Section -->
                 <div class="row g-4">
                     <!-- BPM Role -->
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item">
-                            <div class="d-flex flex-column align-items-center mt-4 pt-5">
-                                <div class="team-role-header">
-                                    <h5 class="fw-bold m-0">BPM (3 Members)</h5>
-                                </div>
-                                <div class="team-members">
-                                    <p>Member 1</p>
-                                    <p>Member 2</p>
-                                    <p>Member 3</p>
-                                </div>
+                            <div class="team-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="team-role-header">
+                                BPM (3 Members)
+                            </div>
+                            <div class="team-members">
+                                <p>Member 1</p>
+                                <p>Member 2</p>
+                                <p>Member 3</p>
                             </div>
                         </div>
                     </div>
@@ -128,14 +195,15 @@
                     <!-- Mobile Role -->
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="team-item">
-                            <div class="d-flex flex-column align-items-center mt-4 pt-5">
-                                <div class="team-role-header">
-                                    <h5 class="fw-bold m-0">Mobile (2 Members)</h5>
-                                </div>
-                                <div class="team-members">
-                                    <p>Member 1</p>
-                                    <p>Member 2</p>
-                                </div>
+                            <div class="team-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="team-role-header">
+                                Mobile (2 Members)
+                            </div>
+                            <div class="team-members">
+                                <p>Member 1</p>
+                                <p>Member 2</p>
                             </div>
                         </div>
                     </div>
@@ -143,14 +211,15 @@
                     <!-- Frontend/Backend Role -->
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="team-item">
-                            <div class="d-flex flex-column align-items-center mt-4 pt-5">
-                                <div class="team-role-header">
-                                    <h5 class="fw-bold m-0">Frontend / Backend (2 Members)</h5>
-                                </div>
-                                <div class="team-members">
-                                    <p>Member 1</p>
-                                    <p>Member 2</p>
-                                </div>
+                            <div class="team-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="team-role-header">
+                                Frontend / Backend (2 Members)
+                            </div>
+                            <div class="team-members">
+                                <p>Member 1</p>
+                                <p>Member 2</p>
                             </div>
                         </div>
                     </div>
@@ -158,13 +227,14 @@
                     <!-- QA Automation Role -->
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                         <div class="team-item">
-                            <div class="d-flex flex-column align-items-center mt-4 pt-5">
-                                <div class="team-role-header">
-                                    <h5 class="fw-bold m-0">QA Automation (1 Member)</h5>
-                                </div>
-                                <div class="team-members">
-                                    <p>Member 1</p>
-                                </div>
+                            <div class="team-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="team-role-header">
+                                QA Automation (1 Member)
+                            </div>
+                            <div class="team-members">
+                                <p>Member 1</p>
                             </div>
                         </div>
                     </div>
