@@ -5,8 +5,6 @@
     <meta charset="utf-8">
     <title>Nexova IT Solutions</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -18,7 +16,6 @@
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -26,26 +23,32 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Custom Styles -->
     <style>
         .team-section {
             padding: 60px 0;
             background-color: #f7f8fa;
         }
 
+        /* Basic Structure */
+        .team-hierarchy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .level {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
         .team-item {
             background-color: white;
             border: 2px solid #007bff;
             border-radius: 10px;
-            padding: 30px;
+            padding: 20px;
             text-align: center;
-            /* Removed hover effects */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Plain tiles, no hover effect */
-        .team-item:hover {
-            transform: none;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
@@ -61,35 +64,21 @@
             color: #777;
         }
 
-        /* Highlight the number of team members */
+        /* Styling for team member count */
         .team-item p span {
             font-size: 1.5rem;
             font-weight: bold;
             color: #007bff;
         }
 
-        .team-item .team-info {
-            margin-top: 10px;
-        }
-
-        .team-item .team-info .social-icons {
-            margin-top: 10px;
-        }
-
-        .team-item .social-icons a {
-            font-size: 1.5rem;
-            color: #007bff;
-            margin: 5px;
-            transition: color 0.3s ease;
-        }
-
-        .team-item .social-icons a:hover {
-            color: #0056b3;
+        /* Nested Structure */
+        .level .level {
+            margin-top: 20px;
         }
 
         @media (max-width: 767px) {
-            .team-item {
-                margin-bottom: 20px;
+            .level {
+                flex-direction: column;
             }
         }
     </style>
@@ -131,105 +120,66 @@
         </div>
         <!-- Hero End -->
 
-        <!-- Team Section Start -->
+        <!-- Team Hierarchy Section Start -->
         <div class="team-section">
             <div class="container px-lg-5">
                 <div class="section-title position-relative text-center mb-5 pb-2">
                     <h6 class="position-relative d-inline text-primary ps-4">Our Team</h6>
                     <h2 class="mt-2">Our Team Structure</h2>
                 </div>
-                <div class="row g-4">
-                    <!-- Team Member 1 -->
-                    <div class="col-lg-4 col-md-6">
+
+                <!-- Hierarchy Structure -->
+                <div class="team-hierarchy">
+                    <!-- Level 1: CEO -->
+                    <div class="level">
                         <div class="team-item">
-                            <h5>BPM</h5>
-                            <p><span>3 Members</span></p>
-                            <div class="team-info">
-                                <div class="social-icons">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
+                            <h5>CEO</h5>
+                            <p><span>1 Member</span></p>
                         </div>
                     </div>
-                    <!-- Team Member 2 -->
-                    <div class="col-lg-4 col-md-6">
+
+                    <!-- Level 2: Managers -->
+                    <div class="level">
                         <div class="team-item">
-                            <h5>Mobile</h5>
+                            <h5>BPM Manager</h5>
+                            <p><span>3 Members</span></p>
+                        </div>
+                        <div class="team-item">
+                            <h5>Mobile Manager</h5>
                             <p><span>4 Members</span></p>
-                            <div class="team-info">
-                                <div class="social-icons">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
                         </div>
                     </div>
-                    <!-- Team Member 3 -->
-                    <div class="col-lg-4 col-md-6">
+
+                    <!-- Level 3: Development Teams -->
+                    <div class="level">
                         <div class="team-item">
-                            <h5>Frontend / Backend</h5>
+                            <h5>Frontend/Backend Team</h5>
                             <p><span>5 Members</span></p>
-                            <div class="team-info">
-                                <div class="social-icons">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
                         </div>
-                    </div>
-                    <!-- Team Member 4 -->
-                    <div class="col-lg-4 col-md-6">
                         <div class="team-item">
-                            <h5>QA Automation</h5>
+                            <h5>QA Automation Team</h5>
                             <p><span>2 Members</span></p>
-                            <div class="team-info">
-                                <div class="social-icons">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
                         </div>
                     </div>
-                    <!-- Team Member 5 -->
-                    <div class="col-lg-4 col-md-6">
+
+                    <!-- Level 4: Other Teams -->
+                    <div class="level">
                         <div class="team-item">
-                            <h5>DevOps</h5>
+                            <h5>DevOps Team</h5>
                             <p><span>3 Members</span></p>
-                            <div class="team-info">
-                                <div class="social-icons">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
                         </div>
-                    </div>
-                    <!-- Team Member 6 -->
-                    <div class="col-lg-4 col-md-6">
                         <div class="team-item">
                             <h5>HR & Admin</h5>
                             <p><span>1 Member</span></p>
-                            <div class="team-info">
-                                <div class="social-icons">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Team Section End -->
+        <!-- Team Hierarchy Section End -->
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container-fluid bg-primary text-light footer mt-5 pt-5">
             <div class="container py-5 px-lg-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-3">
@@ -237,13 +187,6 @@
                         <p><i class="fa fa-map-marker-alt me-3"></i>Colombo, Srilanka</p>
                         <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                         <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
