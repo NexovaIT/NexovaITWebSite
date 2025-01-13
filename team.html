@@ -28,6 +28,18 @@
 
     <!-- Custom Styles for Flat Team Structure -->
     <style>
+
+        /* Blue color for the first six tiles */
+.team-card:nth-child(-n+6) {
+    background-color: #007bff; /* Blue background */
+    color: white; /* Ensure text is visible against the blue background */
+}
+
+/* Adjust hover effect for the blue cards */
+.team-card:nth-child(-n+6):hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
         .team-section {
             background-color: #f7f8fa;
             padding: 50px 0;
