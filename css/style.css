@@ -366,7 +366,7 @@ h6,
 }
 
 .team-item:hover::after {
-    background: var(--primary);
+  
 }
 
 .team-item h5,
@@ -376,7 +376,7 @@ h6,
 
 .team-item:hover h5,
 .team-item:hover small {
-    color: var(--light);
+   
 }
 
 
