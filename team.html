@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>Nexova IT Solutions</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="team hierarchy view" name="keywords">
-    <meta content="Nexova IT Solutions Team Structure" name="description">
+    <meta content="team members flat structure" name="keywords">
+    <meta content="Nexova IT Solutions Team Members" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -26,57 +26,78 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Custom Styles for Team Hierarchy -->
+    <!-- Custom Styles for Flat Team Structure -->
     <style>
-        .team-hierarchy {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        .team-section {
+            background-color: #f7f8fa;
+            padding: 50px 0;
         }
 
-        .level {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-            margin-bottom: 40px;
-        }
-
-        .team-member {
-            text-align: center;
-            padding: 20px;
-            margin: 10px;
-            background-color: #f8f9fa;
+        .team-card {
+            background-color: white;
+            border: 1px solid #e0e0e0;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 150px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
         }
 
-        .team-member h5 {
-            font-size: 1.1rem;
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .team-card-body {
+            padding: 20px;
+        }
+
+        .team-card-body h5 {
+            font-size: 1.2rem;
             font-weight: bold;
-            margin: 10px 0;
+            color: #333;
+            margin-bottom: 5px;
         }
 
-        .line {
-            width: 2px;
-            background-color: #007bff;
-            height: 40px;
-            margin-bottom: 40px;
-        }
-
-        .team-member small {
+        .team-card-body small {
             font-size: 0.9rem;
             color: #6c757d;
         }
 
-        .team-member a {
+        .team-card-body .social-icons a {
+            font-size: 1.3rem;
             color: #007bff;
-            text-decoration: none;
+            margin: 5px;
+            transition: color 0.3s ease;
         }
 
-        .team-member a:hover {
-            text-decoration: underline;
+        .team-card-body .social-icons a:hover {
+            color: #0056b3;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .col-md-4 {
+            flex: 0 0 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
+        }
+
+        @media (max-width: 767px) {
+            .col-md-4 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -117,65 +138,82 @@
         </div>
         <!-- Navbar & Hero End -->
 
-        <!-- Team Hierarchy Start -->
-        <div class="container-xxl py-5">
+        <!-- Team Section Start -->
+        <div class="team-section">
             <div class="container px-lg-5">
                 <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="position-relative d-inline text-primary ps-4">Our Team</h6>
-                    <h2 class="mt-2">Our Team Structure</h2>
+                    <h2 class="mt-2">Meet Our Talented Team</h2>
                 </div>
-
-                <div class="team-hierarchy">
-                    <!-- Top-Level (CEO) -->
-                    <div class="level">
-                        <div class="team-member">
-                            <h5>CEO</h5>
-                            <small>Chief Executive Officer</small>
+                <div class="row">
+                    <!-- Team Member 1 -->
+                    <div class="col-md-4">
+                        <div class="team-card">
+                            <img src="img/team-1.jpg" alt="Team Member">
+                            <div class="team-card-body">
+                                <h5>BPM</h5>
+                                <small>Business Process Manager</small>
+                                <div class="social-icons">
+                                    <a href="#" class="fab fa-facebook-f"></a>
+                                    <a href="#" class="fab fa-twitter"></a>
+                                    <a href="#" class="fab fa-linkedin-in"></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Second-Level -->
-                    <div class="line"></div>
-                    <div class="level">
-                        <div class="team-member">
-                            <h5>BPM</h5>
-                            <small>Business Process Manager</small>
-                        </div>
-                        <div class="team-member">
-                            <h5>CTO</h5>
-                            <small>Chief Technology Officer</small>
-                        </div>
-                    </div>
-
-                    <!-- Third-Level -->
-                    <div class="line"></div>
-                    <div class="level">
-                        <div class="team-member">
-                            <h5>Frontend Developer</h5>
-                            <small>UI/UX Specialist</small>
-                        </div>
-                        <div class="team-member">
-                            <h5>Backend Developer</h5>
-                            <small>Backend Specialist</small>
-                        </div>
-                        <div class="team-member">
-                            <h5>QA Engineer</h5>
-                            <small>Quality Assurance</small>
+                    <!-- Team Member 2 -->
+                    <div class="col-md-4">
+                        <div class="team-card">
+                            <img src="img/team-2.jpg" alt="Team Member">
+                            <div class="team-card-body">
+                                <h5>Mobile</h5>
+                                <small>Mobile Developer</small>
+                                <div class="social-icons">
+                                    <a href="#" class="fab fa-facebook-f"></a>
+                                    <a href="#" class="fab fa-twitter"></a>
+                                    <a href="#" class="fab fa-linkedin-in"></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Fourth-Level -->
-                    <div class="line"></div>
-                    <div class="level">
-                        <div class="team-member">
-                            <h5>Mobile Developer</h5>
-                            <small>Mobile App Specialist</small>
+                    <!-- Team Member 3 -->
+                    <div class="col-md-4">
+                        <div class="team-card">
+                            <img src="img/team-3.jpg" alt="Team Member">
+                            <div class="team-card-body">
+                                <h5>Frontend / Backend</h5>
+                                <small>Full Stack Developer</small>
+                                <div class="social-icons">
+                                    <a href="#" class="fab fa-facebook-f"></a>
+                                    <a href="#" class="fab fa-twitter"></a>
+                                    <a href="#" class="fab fa-linkedin-in"></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="col-md-4">
+                        <div class="team-card">
+                            <img src="img/team-4.jpg" alt="Team Member">
+                            <div class="team-card-body">
+                                <h5>QA</h5>
+                                <small>Quality Assurance</small>
+                                <div class="social-icons">
+                                    <a href="#" class="fab fa-facebook-f"></a>
+                                    <a href="#" class="fab fa-twitter"></a>
+                                    <a href="#" class="fab fa-linkedin-in"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-        <!-- Team Hierarchy End -->
+        <!-- Team Section End -->
 
         <!-- Footer Start -->
         <div class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
