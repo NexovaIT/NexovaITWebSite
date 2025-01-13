@@ -28,70 +28,46 @@
 
     <!-- Custom Styles for Flat Team Structure -->
     <style>
-        /* Team Section Styles */
         .team-section {
             background-color: #f7f8fa;
-            padding: 60px 0;
+            padding: 50px 0;
         }
 
         .team-card {
             background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             text-align: center;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            position: relative;
-            padding-bottom: 30px;
+            transition: transform 0.3s ease;
         }
 
         .team-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         .team-card-body {
-            padding: 25px;
+            padding: 20px;
         }
 
         .team-card-body h5 {
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-size: 1.2rem;
+            font-weight: bold;
             color: #333;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .team-card-body small h6 {
-            font-size: 1rem;
-            font-weight: 400;
-            color: #6c757d;
+            margin-bottom: 5px;
         }
 
         .team-card-body small {
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .team-member-count {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #fff;
-            background-color: #007bff;
-            border-radius: 25px;
-            padding: 8px 15px;
-            transition: background-color 0.3s ease;
-        }
-
-        .team-member-count:hover {
-            background-color: #0056b3;
-            cursor: pointer;
+            font-size: 0.9rem;
+            color: #6c757d;
         }
 
         .team-card-body .social-icons a {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             color: #007bff;
-            margin: 10px;
+            margin: 5px;
             transition: color 0.3s ease;
         }
 
@@ -102,7 +78,7 @@
         .row {
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 30px;
         }
 
         .col-md-4 {
@@ -117,17 +93,22 @@
             }
         }
 
-        /* Icon Hover Effects */
-        .btn-link.arrow {
-            font-size: 1.5rem;
-            color: #007bff;
-            transition: transform 0.3s ease;
+        /* Highlight the team member count */
+        .team-member-count {
+            font-size: 1rem; /* Smaller font size */
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff; /* Blue background */
+            border-radius: 20px;
+            padding: 8px 15px;
+            display: inline-block;
+            transition: all 0.3s ease;
         }
 
-        .btn-link.arrow:hover {
-            transform: rotate(180deg);
+        .team-member-count:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            cursor: pointer;
         }
-
     </style>
 </head>
 
@@ -274,7 +255,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
