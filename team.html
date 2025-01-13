@@ -39,13 +39,14 @@
             border-radius: 10px;
             padding: 30px;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: box-shadow 0.3s ease;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
+        /* Remove hover effects */
         .team-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transform: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .team-item h5 {
@@ -58,6 +59,13 @@
         .team-item p {
             font-size: 1rem;
             color: #777;
+        }
+
+        /* Highlight the number of team members */
+        .team-item p span {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #007bff;
         }
 
         .team-item .team-info {
@@ -135,7 +143,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="team-item wow fadeInUp" data-wow-delay="0.1s">
                             <h5>BPM</h5>
-                            <p>3 Members</p>
+                            <p><span>3 Members</span></p>
                             <div class="team-info">
                                 <div class="social-icons">
                                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -149,7 +157,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="team-item wow fadeInUp" data-wow-delay="0.3s">
                             <h5>Mobile</h5>
-                            <p>4 Members</p>
+                            <p><span>4 Members</span></p>
                             <div class="team-info">
                                 <div class="social-icons">
                                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -163,7 +171,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="team-item wow fadeInUp" data-wow-delay="0.4s">
                             <h5>Frontend / Backend</h5>
-                            <p>5 Members</p>
+                            <p><span>5 Members</span></p>
                             <div class="team-info">
                                 <div class="social-icons">
                                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -177,7 +185,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="team-item wow fadeInUp" data-wow-delay="0.6s">
                             <h5>QA Automation</h5>
-                            <p>2 Members</p>
+                            <p><span>2 Members</span></p>
                             <div class="team-info">
                                 <div class="social-icons">
                                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -191,7 +199,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="team-item wow fadeInUp" data-wow-delay="0.8s">
                             <h5>DevOps</h5>
-                            <p>3 Members</p>
+                            <p><span>3 Members</span></p>
                             <div class="team-info">
                                 <div class="social-icons">
                                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -205,7 +213,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="team-item wow fadeInUp" data-wow-delay="1s">
                             <h5>HR & Admin</h5>
-                            <p>1 Member</p>
+                            <p><span>1 Member</span></p>
                             <div class="team-info">
                                 <div class="social-icons">
                                     <a href="#"><i class="fab fa-facebook-f"></i></a>
