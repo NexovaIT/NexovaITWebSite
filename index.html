@@ -575,6 +575,9 @@
     <!-- Custom Counter Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+
+		if const divElement = document.querySelector("#myDiv");
+  if (divElement) {
             // Set the target count (total number of team members)
             const targetCount = 35;
             let currentCount = 0;
@@ -590,6 +593,7 @@
                 } else {
                     clearInterval(counterInterval); // Stop the interval once the target is reached
                 }
+	    }
             };
 
             // Set the interval to update the count every 100 milliseconds
