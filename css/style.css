@@ -1,19 +1,25 @@
 /********** Template CSS **********/
         .team-item {
-            border: 2px solid #007bff; /* Blue outline */
+            border: 0px solid #153D63; /* Blue outline */
             border-radius: 8px;
             transition: all 0.3s ease;
-            padding: 20px;
+            padding-top: 10px;
+			padding-right: 0px;
+			padding-bottom: 0px;
+			padding-left: 0px;
             text-align: center;
-            background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+            background: #fff; /* Semi-transparent white background */
             backdrop-filter: blur(10px); /* Apply blur effect to the background */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow to enhance the glassy effect */
-            color: #fff; /* Light text color to contrast with the dark background */
+            box-shadow: 0 0 45px rgba(0, 0, 0, .08); /* Light shadow to enhance the glassy effect */
+            color: #ffffff; /* Light text color to contrast with the dark background */
         }
 
         .team-item:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            transform: translateY(-10px);
+            box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+			background: #153D63; /* Semi-transparent white background */
+			border: 0px solid #969898;
+            transform: translateY(-0px);
+			color: #ffffff;
         }
 
         .team-item .btn-social {
@@ -36,13 +42,34 @@
         .team-count {
             font-size: 1.8rem;
             font-weight: bold;
-            color: #007bff;
+            color: #153D63;
         }
 
-           .team-cat {
+        .team-cat {
             font-size: 1.6rem;
             font-weight: bold;
-            color: #007bff;
+            color: #abacad;
+        }
+		
+		.team-item h5{
+			font-size: 1.6rem;
+            font-weight: bold;
+            color: #153D63;
+			
+		}
+		
+		
+		.team-item:hover h5{
+			font-size: 1.6rem;
+            font-weight: 600;
+            color: #ffffff;
+			
+		}
+		
+		.team-cat:hover {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #ffffff;
         }
 
         .team-count span {
@@ -51,14 +78,15 @@
 
         .team-member-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+			gap: 20px;
         }
 
         .highlight-count {
             font-size: 1.4rem;
             font-weight: bold;
             color: #ff5733;
+			margin-bottom: 0px;
         }
 
         @media (max-width: 767px) {
@@ -72,10 +100,10 @@
         }
 
 :root {
-    --primary: #2124B1;
-    --secondary: #4777F5;
-    --light: #F7FAFF;
-    --dark: #1D1D27;
+    --primary: #153D63;
+    --secondary: #fff;
+    --light: #adb3b9;
+    --dark: #153D63;
 }
 
 
@@ -169,6 +197,7 @@ h6,
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
     color: var(--secondary) !important;
+text-shadow:-1px -1px 0 #153d63, 1px -1px 0 #153d63, -1px 1px 0 #153d63, 1px 1px 0 #153d63;
 }
 
 .navbar-light .navbar-brand h1 {
@@ -254,7 +283,7 @@ h6,
 
 
 /*** Hero Header ***/
-.hero-header {
+/***.hero-header {
     background:
         url(../img/bg-dot.png),
         url(../img/bg-round.png),
@@ -266,6 +295,18 @@ h6,
         left 45% bottom -1px,
         center bottom -1px;
     background-repeat: no-repeat;
+	
+}***/
+
+.hero-header {
+    background:
+        url(../img/bg-round.png),
+		url(../img/bg-bottom-hero.png);
+    background-position:
+        left 10% top -1px,
+		center bottom -1px; 
+    background-repeat: no-repeat;
+	
 }
 
 
@@ -489,6 +530,7 @@ h6,
     z-index: 1;
     opacity: 0;
     color: whitesmoke;
+	color :#abacad;
 }
 
 .portfolio-item:hover .portfolio-overlay {
