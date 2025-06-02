@@ -12,6 +12,9 @@
             backdrop-filter: blur(10px); /* Apply blur effect to the background */
             box-shadow: 0 0 45px rgba(0, 0, 0, .08); /* Light shadow to enhance the glassy effect */
             color: #ffffff; /* Light text color to contrast with the dark background */
+			vertical-align: middle;
+			height: 90px;
+			
         }
 
         .team-item:hover {
